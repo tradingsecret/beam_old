@@ -1,5 +1,5 @@
 {
-  "name": "beam-wasm-client@BEAM_TARGET_SUFFIX@",
+  "name": "tradingsecretv2-beam-wasm-client@BEAM_TARGET_SUFFIX@",
   "version": "@BEAM_VERSION@",
   "description": "WASM version of BEAM wallet client for '@BEAM_SUFFIX_LOWER_CASE@'",
   "repository": {
