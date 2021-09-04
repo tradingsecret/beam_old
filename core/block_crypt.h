@@ -252,22 +252,22 @@ namespace beam
 
 		struct {
 			// emission parameters
-			Amount Value0	= Coin * 80; // Initial emission. Each drop it will be halved. In case of odd num it's rounded to the lower value.
+			Amount Value0	= Coin * 350; // Initial emission. Each drop it will be halved. In case of odd num it's rounded to the lower value.
 			Height Drop0	= 1440 * 365; // 1 year roughly. This is the height of the last block that still has the initial emission, the drop is starting from the next block
 			Height Drop1	= 1440 * 365 * 4; // 4 years roughly. Each such a cycle there's a new drop
 		} Emission;
 
 		struct {
-			Height Coinbase	= 10; // 4 hours
+			Height Coinbase	= 50; // 4 hours
 			Height Std		= 0; // not restricted. Can spend even in the block of creation (i.e. spend it before it becomes visible)
 		} Maturity;
 
 		struct {
 			// timestamp & difficulty.
-			uint32_t Target_s		= 60; // 1 minute
-			uint32_t WindowWork		= 120; // 2 hours roughly (under normal operation)
-			uint32_t MaxAhead_s		= 60 * 15; // 15 minutes. Timestamps ahead by more than 15 minutes won't be accepted
-			uint32_t WindowMedian0	= 25; // Timestamp for a block must be (strictly) higher than the median of preceding window
+			uint32_t Target_s		= 30; // 1 minute
+			uint32_t WindowWork		= 60; // 2 hours roughly (under normal operation)
+			uint32_t MaxAhead_s		= 30 * 15; // 15 minutes. Timestamps ahead by more than 15 minutes won't be accepted
+			uint32_t WindowMedian0	= 10; // Timestamp for a block must be (strictly) higher than the median of preceding window
 			uint32_t WindowMedian1	= 7; // Num of blocks taken at both endings of WindowWork, to pick medians.
 			Difficulty Difficulty0	= Difficulty(8 << Difficulty::s_MantissaBits); // 2^8 = 256
 
@@ -287,7 +287,7 @@ namespace beam
 
 		uint32_t MaxRollback = 1440; // 1 day roughly
 
-		size_t MaxBodySize = 0x100000; // 1MB
+		size_t MaxBodySize = 0x200000; // 1MB
 
 		bool AllowPublicUtxos = false;
 		bool FakePoW = false;
