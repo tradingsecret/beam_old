@@ -21,7 +21,7 @@ namespace beam
 	struct Difficulty
 	{
 		uint32_t m_Packed;
-		static const uint32_t s_MantissaBits = 24;
+		static const uint32_t s_MantissaBits = 12;
 
 		Difficulty(uint32_t d = 0) :m_Packed(d) {}
 

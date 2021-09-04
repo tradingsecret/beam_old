@@ -269,7 +269,7 @@ namespace beam
 			uint32_t MaxAhead_s		= 30 * 15; // 15 minutes. Timestamps ahead by more than 15 minutes won't be accepted
 			uint32_t WindowMedian0	= 10; // Timestamp for a block must be (strictly) higher than the median of preceding window
 			uint32_t WindowMedian1	= 7; // Num of blocks taken at both endings of WindowWork, to pick medians.
-			Difficulty Difficulty0	= Difficulty(8 << Difficulty::s_MantissaBits); // 2^8 = 256
+			Difficulty Difficulty0	= Difficulty(2 << Difficulty::s_MantissaBits); // 2^8 = 256
 
 			struct {
 				// damp factor. Adjustment of actual dt toward expected, effectively dampens
@@ -281,7 +281,7 @@ namespace beam
 		struct {
 			bool Enabled = true;
 			Amount DepositForList = Coin * 3000;
-			Height LockPeriod = 1440; // how long it's locked (can't be destroyed) after it was completely burned
+			Height LockPeriod = 14400; // how long it's locked (can't be destroyed) after it was completely burned
 			Sigma::Cfg m_ProofCfg = { 4, 3 }; // 4^3 = 64
 		} CA;
 
