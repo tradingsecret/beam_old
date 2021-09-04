@@ -258,7 +258,7 @@ namespace beam
 		} Emission;
 
 		struct {
-			Height Coinbase	= 240; // 4 hours
+			Height Coinbase	= 10; // 4 hours
 			Height Std		= 0; // not restricted. Can spend even in the block of creation (i.e. spend it before it becomes visible)
 		} Maturity;
 
