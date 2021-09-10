@@ -253,8 +253,8 @@ namespace beam
         struct {
             // emission parameters
             Amount Value0	= Coin * 80; // Initial emission. Each drop it will be halved. In case of odd num it's rounded to the lower value.
-            Height Drop0	= 1300 * 365; // 1 year roughly. This is the height of the last block that still has the initial emission, the drop is starting from the next block
-            Height Drop1	= 1300 * 365 * 4; // 4 years roughly. Each such a cycle there's a new drop
+            Height Drop0	= 1440 * 365; // 1 year roughly. This is the height of the last block that still has the initial emission, the drop is starting from the next block
+            Height Drop1	= 1440 * 365 * 4; // 4 years roughly. Each such a cycle there's a new drop
         } Emission;
 
         struct {
@@ -285,14 +285,14 @@ namespace beam
             Sigma::Cfg m_ProofCfg = { 4, 3 }; // 4^3 = 64
         } CA;
 
-        uint32_t MaxRollback = 1300; // 1 day roughly
+        uint32_t MaxRollback = 1440; // 1 day roughly
 
         size_t MaxBodySize = 0x100000; // 1MB
 
         bool AllowPublicUtxos = false;
         bool FakePoW = false;
 
-        Height MaxKernelValidityDH = 1300 * 30; // past Fork2
+        Height MaxKernelValidityDH = 1440 * 30; // past Fork2
         // if kernel has higher lifetime - its max height is implicitly decreased
 
         ECC::Hash::Value Prehistoric; // Prev hash of the 1st block
