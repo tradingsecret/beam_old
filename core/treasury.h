@@ -127,9 +127,8 @@ namespace beam
 		struct Parameters
 		{
 			Height m_Maturity0 = 0;
-			Height m_MaturityStep = 550 * 365 / 12; // 1 month roughly
-			uint32_t m_Bursts = 12 * 5; // 5 years plan
-
+			Height m_MaturityStep = 14600;//1440 * 365 / 12; // 1 month roughly
+			uint32_t m_Bursts = 12 * 10;//12 * 5; // 5 years plan
 		};
 
 		struct Entry
