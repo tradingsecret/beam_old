@@ -16,7 +16,7 @@ echo $hex . "\n";
 
 
 
-$hex2 = hex2bin('e0a96dc5d18190af953218ccfcb99ed925b987d4b631026a4ed12fd2c3c5fa28');
+$hex2 = hex2bin('c4b6cdcb924ecde56f46e133a83fd0f86a98c257f93b8df18a7227eec241c551');
 
 $chars = array_map("ord", str_split($hex2));
 $chars = array_map("dechex", $chars);
