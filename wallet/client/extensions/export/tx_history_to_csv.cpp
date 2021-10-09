@@ -103,7 +103,7 @@ std::string ExportTxHistoryToCsv(const IWalletDB& db)
 
         auto assetIdOptional = tx.GetParameter<Asset::ID>(TxParameterID::AssetID);
         Asset::ID assetId  = assetIdOptional ? *assetIdOptional : 0;
-        std::string unitName = "BEAM";
+        std::string unitName = "ARC";
         const auto info = db.findAsset(assetId);
         if (info.is_initialized())
         {
