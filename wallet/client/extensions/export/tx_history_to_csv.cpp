@@ -66,11 +66,11 @@ std::string ExportTxHistoryToCsv(const IWalletDB& db)
        << "\"Unit name\"" << ","
        << "\"Amount, USD\"" << ","
        << "\"Amount, BTC\"" << ","
-       << "\"Transaction fee, BEAM\"" << ","
+       << "\"Transaction fee, ARC\"" << ","
        << "Status" << ","
-       << "Comment" << "," 
+       << "Comment" << ","
        << "Transaction ID" << ","
-       << "Kernel ID" << "," 
+       << "Kernel ID" << ","
        << "Sending address" << ","
        << "Sending wallet's signature" << ","
        << "Receiving address" << ","
@@ -103,7 +103,7 @@ std::string ExportTxHistoryToCsv(const IWalletDB& db)
 
         auto assetIdOptional = tx.GetParameter<Asset::ID>(TxParameterID::AssetID);
         Asset::ID assetId  = assetIdOptional ? *assetIdOptional : 0;
-        std::string unitName = "BEAM";
+        std::string unitName = "ARC";
         const auto info = db.findAsset(assetId);
         if (info.is_initialized())
         {
