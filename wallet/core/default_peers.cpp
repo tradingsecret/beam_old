@@ -20,21 +20,25 @@ namespace beam
         std::vector<std::string> result
         {
 #ifdef BEAM_TESTNET
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #elif defined(BEAM_MAINNET)
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #elif defined(BEAM_BEAMX)
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #else
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #endif
         };
 
@@ -46,13 +50,15 @@ namespace beam
         std::vector<std::string> result
         {
 #if defined(BEAM_TESTNET)
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #elif defined(BEAM_MAINNET)
-            "imperiumprotocol.com:10000",
-            "185.150.119.69:10000",
-            "162.55.46.245:10000"
+            "entrypoint1.imperiumprotocol.com:10000",
+            "entrypoint2.imperiumprotocol.com:10000",
+            "entrypoint3.imperiumprotocol.com:10000",
+            "entrypoint4.imperiumprotocol.com:10000"
 #else
             // "ap-node01.masternet.beam.mw:8100",
             // "ap-node02.masternet.beam.mw:8100",
